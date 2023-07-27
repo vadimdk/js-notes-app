@@ -1,0 +1,17 @@
+{"notesData": [
+    {
+      "id": 1,
+      "createdAt": "2023-07-20T00:00:00.000Z",
+      "content": "Remember to buy groceries.",
+      "category": "Task",
+      "archived": false
+    },
+    {
+      "id": 2,
+      "createdAt": "2023-07-21T00:00:00.000Z",
+      "content": "I had a random thought today.",
+      "category": "Random Thought",
+      "archived": false
+    }
+  ]
+}
