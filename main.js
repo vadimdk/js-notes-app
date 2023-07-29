@@ -8,70 +8,18 @@ import {
   closeIcon
 } from "./helpers/buttonsHandlers.js";
 
+import { nameField, categoryField, contentField, inputHandler, submit, sendData} from "./formHandlers/createNote.js"
+
 closeButton.addEventListener("click", closeModal);
 closeIcon.addEventListener("click", closeModal);
 createNoteBtn.addEventListener("click", openModal);
-
-const nameField = document.getElementById("name");
-const categoryField = document.getElementById("category");
-const contentField = document.getElementById("content");
-
-let dataObj = {
-  name: "",
-  category: "",
-  content: ""
-};
-const inputHandler = (e) => {
-  dataObj = { ...dataObj, [e.target.name]: e.target.value}
-};
 
 nameField.addEventListener("change", inputHandler);
 categoryField.addEventListener("change", inputHandler);
 contentField.addEventListener("change", inputHandler);
 
-const submit = document.querySelector(".btn-submit");
 
-const sendData = async () => {
-  const timeElapsed = Date.now();
-  const currentTime = new Date(timeElapsed)
-  let data = {
-    ...dataObj,
-    archived: false,
-    createdAt: currentTime
-  }
-  
-  try {
-    const post = await fetch("http://localhost:4001/notesData", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    // const result = await post.json()
-  } catch (error) {
-    console.log('error', error)
-  }
-}
 submit.addEventListener("click", sendData);
-
-
-let notesData = [
-  // {
-  //   id: 1,
-  //   name: "Shopping list",
-  //   createdAt: new Date("2023-07-20"),
-  //   category: "Task",
-  //   content: "Remember to buy groceries.",
-  // },
-  // {
-  //   id: 2,
-  //   name: "Todo list",
-  //   createdAt: new Date("2023-07-21"),
-  //   category: "Random Thought",
-  //   content: "I had a random thought today. ",
-  // }
-];
 
 // Event listener for archiving a note
 function archiveNoteHandler(event) {
@@ -113,7 +61,7 @@ function bindEventListeners() {
 
 function initApp() {
   fetchData();
-  renderSummaryTable(notesData);
+  // renderSummaryTable(notesData);
   bindEventListeners();
 }
 

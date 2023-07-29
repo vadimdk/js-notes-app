@@ -1,7 +1,5 @@
-function extractDates(content) {
-  const dateRegex = /\d{1,2}\/\d{1,2}\/\d{4}/g;
-  return content.match(dateRegex) || [];
-}
+import {renderSummaryTable} from "./summaryTable.js"
+import {cutLongString, extractDates} from "./../helpers/helperFunc.js"
 
 const fetchData = async () => {
   let data = [];
@@ -11,6 +9,7 @@ const fetchData = async () => {
     console.log("result", result);
     data = [...result];
     renderNotesTable(data);
+    renderSummaryTable(data)
   } catch (error) {
     console.log("error", error);
   }
@@ -32,25 +31,28 @@ function renderNotesTable(notes) {
     `;
 
   notes.forEach((note) => {
+    if (note.archived) {
+      return
+    }
     const datesMentioned = extractDates(note.content);
+    const transformedStr = cutLongString(note.content)
 
     const row = document.createElement("div");
     row.classList.add("table-row");
+    row.id = note.id
     row.innerHTML = `
       <div class="th">${note.name}</div>
-       <div class="th">${note.createdAt.slice(0, 10)}</div>
-      <div class="th">${note.content}</div>
+      <div class="th">${note.createdAt.slice(0, 10)}</div>
       <div class="th">${note.category}</div>
+      <div class="th">${transformedStr}</div>
       <div class="th">${datesMentioned.join(", ")}</div>
       <div class="icons-block">
       <span>!</span>
       <span>A</span>
       <span>D</span>
       </div>
-      
       `;
       
-    // <div class="th">${note.createdAt.toDateString()}</div>
     table.appendChild(row);
   });
 

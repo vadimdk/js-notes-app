@@ -52,11 +52,12 @@ input {
 }
 
 .form-footer {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 4px;
+  padding-top: 14px;
 }
 
 .btn-submit {

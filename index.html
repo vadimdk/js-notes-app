@@ -21,12 +21,20 @@
       <form >
         <input id="name" type="text" name="name" placeholder="Name">
         <input id="content" type="text" name="content" placeholder="Content">
-        <input id="category" type="text" name="category" placeholder="Category">
-        <div class="form-footer">
-          <button id="btn-cancel" class="modal-close">Cancel</button>
-        </div>
+        
+        <label for="category">Choose category</label> 
+        <select name="category" id="category"> 
+           <option value="Task">Task</option> 
+           <option value="Random Thought">Random Thought</option> 
+           <option value="Idea">Idea</option> 
+           <option value="Qute">Qute</option> 
+        </select>
       </form>
-      <button class="btn-submit" >Submit</button>
+
+      <div class="form-footer">
+        <button id="btn-cancel" class="modal-close">Cancel</button>
+        <button class="btn-submit" >Submit</button>
+      </div>
     </div>
   </div>
   <!-- modal -->
