@@ -1,0 +1,60 @@
+{
+  "notesData": [
+    {
+      "id": 1,
+      "name": "Shopping list",
+      "createdAt": "2023-07-20T00:00:00.000Z",
+      "content": "Remember to buy groceries.",
+      "category": "Task",
+      "archived": false
+    },
+    {
+      "id": 2,
+      "name": "Todo list",
+      "createdAt": "2023-07-21T00:00:00.000Z",
+      "content": "I had a random thought today.",
+      "category": "Random Thought",
+      "archived": false
+    },
+    {
+      "name": "qwee",
+      "category": "fqerfq",
+      "content": "dqwef",
+      "archived": false,
+      "createdAt": "2023-07-28T15:31:34.303Z",
+      "id": 3
+    },
+    {
+      "name": "verfve",
+      "category": "everq",
+      "content": "fver",
+      "archived": false,
+      "createdAt": "2023-07-28T15:32:16.927Z",
+      "id": 4
+    },
+    {
+      "name": "ewfq3",
+      "category": "qqwqeewww",
+      "content": "gnghn",
+      "archived": false,
+      "createdAt": "2023-07-28T15:32:57.642Z",
+      "id": 5
+    },
+    {
+      "name": "bb",
+      "category": "zz",
+      "content": "nn",
+      "archived": false,
+      "createdAt": "2023-07-29T10:38:32.515Z",
+      "id": 6
+    },
+    {
+      "name": "qq",
+      "category": "dd",
+      "content": "aa",
+      "archived": false,
+      "createdAt": "2023-07-29T10:42:25.142Z",
+      "id": 7
+    }
+  ]
+}
