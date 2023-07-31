@@ -1,14 +1,6 @@
 {
   "notesData": [
     {
-      "id": 1,
-      "name": "Shopping list",
-      "createdAt": "2023-07-20T00:00:00.000Z",
-      "content": "Remember to buy groceries.",
-      "category": "Task",
-      "archived": false
-    },
-    {
       "id": 2,
       "name": "Todo list",
       "createdAt": "2023-07-21T00:00:00.000Z",
@@ -17,36 +9,44 @@
       "archived": true
     },
     {
-      "name": "sss",
+      "name": "as",
       "category": "Idea",
-      "content": "dgfhrthetyhtyjet",
+      "content": "cx",
       "archived": false,
-      "createdAt": "2023-07-29T12:00:41.158Z",
-      "id": 3
+      "createdAt": "2023-07-30T10:56:22.565Z",
+      "id": 7
     },
     {
-      "name": "todo",
-      "category": "Qute",
-      "content": "asdfergrth  tytyjnyt yjtyjty 20.03.2022",
-      "archived": false,
-      "createdAt": "2023-07-29T12:01:27.800Z",
-      "id": 4
+      "name": "Todo",
+      "category": "Task",
+      "content": "ewjfh jwefhoi weifhoi;3 iwrhf'o3wef iwerhfoi34ql iwoewrhofq",
+      "archived": true,
+      "createdAt": "2023-07-30T17:23:45.494Z",
+      "id": 11
     },
     {
-      "name": "shops",
+      "name": "ww",
       "category": "Random Thought",
-      "content": "gertrjeek i677ie 7uejw454jkkydfgghkjyil jr8l77ir",
+      "content": "sdgerkgmrelkm kmelfmelr;s.d",
       "archived": false,
-      "createdAt": "2023-07-29T12:12:04.932Z",
-      "id": 5
+      "createdAt": "2023-07-31T08:31:11.428Z",
+      "id": 12
     },
     {
-      "name": "dwew",
-      "category": "",
-      "content": "jortgikrjtij45ji tjfgiorm rjgoirk orjg45iorj rtijg'iotr trifjo;rt tiorjhorit ithjtor; rtohjrtohjortojgorihjlgorwi ijg rihjiotr irhgotir riohgrnvfjkgr;",
+      "name": "Some qute",
+      "category": "Qute",
+      "content": "rgoqei eirog'oe eriojgp'oe ",
       "archived": false,
-      "createdAt": "2023-07-29T12:24:39.285Z",
-      "id": 6
+      "createdAt": "2023-07-31T10:14:09.968Z",
+      "id": 13
+    },
+    {
+      "name": "Shopping list",
+      "category": "Task",
+      "content": "lemon, milk, bread, oats, tomatos, apples",
+      "archived": false,
+      "createdAt": "2023-07-31T10:43:10.884Z",
+      "id": 14
     }
   ]
 }

@@ -1,8 +1,68 @@
+html,
+body {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  max-width: 100vw;
+  margin: 0;
+}
+
+main {
+  width: 98%;
+  margin: 0 auto;
+}
+
 .table-row {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  margin-bottom: 7px;
+  background-color: rgb(232, 234, 245);
+  height: 50px;
+}
+
+.t-cell {
+  width: 250px;
+  font-size: 15px;
+}
+
+.t-cell_short {
+  width: 150px;
+}
+
+.name-col {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.name-col span {
+  margin-left: 5px;
+}
+
+.head-cell {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 4px;
+}
+
+.head {
+  height: 35px;
+  background-color: rgb(153, 153, 153);
+}
+
+#name-cell {
+  margin-left: 5px;
+}
+
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .modal {
@@ -41,7 +101,6 @@ form {
   display: flex;
   width: 90%;
   flex-direction: column;
-  
 }
 
 input {
@@ -61,15 +120,46 @@ input {
 }
 
 .btn-submit {
-    outline: none;
-    border: none;
-    background-color: lightgreen;
-    cursor: pointer;
-    padding: 7px;
-    border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: lightgreen;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+#btn-create {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icons-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.head-icons {
+  justify-content: end;
+  align-items: center;
+  padding: 5px 4px 0 0;
 }
 
 .icons-block span {
-    padding-left: 5px;
-    cursor: pointer;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.fi-ss-trash,
+.fi-ss-pencil,
+.fi-ss-folder-download {
+  color: rgba(99, 96, 96, 0.623);
+  font-size: 20px;
+}
+
+.fi-rs-folder-download,
+.fi-rs-trash {
+  color: white;
+  font-size: 20px;
 }

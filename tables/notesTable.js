@@ -1,5 +1,5 @@
 import {renderSummaryTable} from "./summaryTable.js"
-import {cutLongString, extractDates} from "./../helpers/helperFunc.js"
+import {cutLongString, extractDates, handleIconToShow} from "./../helpers/helperFunc.js"
 
 const fetchData = async () => {
   let data = [];
@@ -21,12 +21,16 @@ function renderNotesTable(notes) {
 
   const table = document.createElement("div");
   table.innerHTML = `
-      <div class="table-row">
-        <div class="th">Name</div>
-        <div class="th">Created</div>
-        <div class="th">Category</div>
-        <div class="th">Content</div>
-        <div class="th">Dates</div>
+      <div class="table-row head">
+        <div id="name-cell" class="t-cell head-cell">Name</div>
+        <div class="t-cell head-cell t-cell_short">Created</div>
+        <div class="t-cell head-cell t-cell_short">Category</div>
+        <div class="t-cell head-cell">Content</div>
+        <div class="t-cell head-cell t-cell_short">Dates</div>
+        <div class="icons-block head-icons">
+        <span class="archive-icon"><i class="fi fi-rs-folder-download"></i></span>
+        <span class="edit-icon" ><i class="fi fi-rs-trash"></i></span>
+        </div>
       </div>
     `;
 
@@ -34,6 +38,7 @@ function renderNotesTable(notes) {
     if (note.archived) {
       return
     }
+    const taskIcon = handleIconToShow(note.category)
     const datesMentioned = extractDates(note.content);
     const transformedStr = cutLongString(note.content)
 
@@ -41,15 +46,15 @@ function renderNotesTable(notes) {
     row.classList.add("table-row");
     row.id = note.id
     row.innerHTML = `
-      <div class="th">${note.name}</div>
-      <div class="th">${note.createdAt.slice(0, 10)}</div>
-      <div class="th">${note.category}</div>
-      <div class="th">${transformedStr}</div>
-      <div class="th">${datesMentioned.join(", ")}</div>
+      <div class="t-cell name-col"><span>${taskIcon}</span><span>${note.name}</span></div>
+      <div class="t-cell t-cell_short">${note.createdAt.slice(0, 10)}</div>
+      <div class="t-cell t-cell_short">${note.category}</div>
+      <div class="t-cell">${transformedStr}</div>
+      <div class="t-cell t-cell_short">${datesMentioned.join(", ")}</div>
       <div class="icons-block">
-      <span>!</span>
-      <span>A</span>
-      <span>D</span>
+      <span class="edit-icon" ><i class="fi fi-ss-pencil" data-key=${note.id}></i></span>
+      <span class="archive-icon"><i class="fi fi-ss-folder-download" data-key=${note.id}></i></span>
+      <span class="del-icon" ><i class="fi fi-ss-trash" data-key=${note.id}></i></span>
       </div>
       `;
       

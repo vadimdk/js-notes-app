@@ -4,7 +4,7 @@ const contentField = document.getElementById("content");
 
 let dataObj = {
   name: "",
-  category: "",
+  category: "Task",
   content: ""
 };
 
@@ -24,14 +24,13 @@ const sendData = async () => {
   }
   
   try {
-    const post = await fetch("http://localhost:4001/notesData", {
-      method: "post",
+     await fetch("http://localhost:4001/notesData", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
-    // const result = await post.json()
   } catch (error) {
     console.log('error', error)
   }

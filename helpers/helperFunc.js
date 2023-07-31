@@ -1,14 +1,27 @@
 function cutLongString(str) {
-    if (str.length < 20) {
-        return str
-    }
-    const cutedStr = `${str.slice(0, 20)} ...`
-    return cutedStr
+  if (str.length < 20) {
+    return str;
+  }
+  const cutedStr = `${str.slice(0, 20)} ...`;
+  return cutedStr;
 }
 
 function extractDates(content) {
-    const dateRegex = /\d{1,2}\/\d{1,2}\/\d{4}/g;
-    return content.match(dateRegex) || [];
-  }
+  const dateRegex = /\d{1,2}\/\d{1,2}\/\d{4}/g;
+  return content.match(dateRegex) || [];
+}
 
-export {cutLongString, extractDates}
+function handleIconToShow(category) {
+  switch (category) {
+    case "Qute":
+      return `<i class="fi fi-sr-comment-quote"></i>`;
+    case "Random Thought":
+      return `<i class="fi fi-ss-head-side-thinking"></i>`;
+    case "Idea":
+      return `<i class="fi fi-ss-lightbulb-dollar"></i>`;
+    default:
+      return `<i class="fi fi-ss-shopping-cart"></i>`;
+  }
+}
+
+export { cutLongString, extractDates, handleIconToShow };
