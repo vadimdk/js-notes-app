@@ -1,53 +1,112 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Notes App</title>
-  
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <main>
+  <head>
+    <title>Notes App</title>
+    <link rel='stylesheet'
+      href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet'
+      href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet'
+      href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <main>
 
-    <h3>Notes App</h3>
-    <div id="notes-table">
-    </div>
-    <div class="wrapper">
-      <button id="btn-create">Create note</button>
-    </div>
-  <div id="summary-table"></div>
-  <!-- modal -->
-  <div id="form-modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-
-        <h4>Modal</h4>
-        <div id="close-icon">x</div>
+      <h3>Notes App</h3>
+      <div id="notes-table">
       </div>
-      <form >
-        <input id="name" type="text" name="name" placeholder="Name">
-        <input id="content" type="text" name="content" placeholder="Content">
-        
-        <label for="category">Choose category</label> 
-        <select name="category" id="category"> 
-          <option value="Task" >Task</option> 
-          <option value="Random Thought">Random Thought</option> 
-          <option value="Idea">Idea</option> 
-           <option value="Qute">Qute</option> 
-        </select>
-      </form>
-
-      <div class="form-footer">
-        <button id="btn-cancel" class="modal-close">Cancel</button>
-        <button class="btn-submit" >Submit</button>
+      <div class="wrapper">
+        <!-- <i id="archive-open" class="fi fi-rs-folder-open"></i> -->
+        <button id="btn-create">Create note</button>
       </div>
-    </div>
-  </div>
-  <!-- modal -->
-  <script type="module" src="main.js"></script>
-</main>
-</body>
+      <div id="summary-table"></div>
+      <!-- modal -->
+      <div id="form-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Create Note</h3>
+            <div id="close-icon"><ion-icon name="close"></ion-icon></div>
+          </div>
+          <form>
+            <div class="input-wrapper">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Note name">
+              <div id="name-input-error" class="error-text">This field is
+                required</div>
+            </div>
+            <label for="content">Content</label>
+            <input id="content" type="text" name="content"
+              placeholder="Note content">
+
+            <label for="category">Choose category</label>
+            <select name="category" id="category">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+              <option value="Qute">Qute</option>
+            </select>
+          </form>
+
+          <div class="form-footer">
+            <button id="btn-cancel" class="modal-close">Cancel</button>
+            <button class="btn-submit">Submit</button>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+      <!-- update note modal -->
+      <div id="update-form-modal" class="update-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h4>Update Note</h4>
+          </div>
+          <form>
+            <label for="edit-name">Name</label>
+            <input id="edit-name" type="text" name="name" placeholder="Name">
+            <label for="edit-content">Content</label>
+            <textarea id="edit-content" type="textarea" name="content"
+              placeholder="Content" rows="3"></textarea>
+            <label for="edit-created">Created</label>
+            <input id="edit-created" type="text" name="created"
+              placeholder="Created" disabled>
+            <label for="edit-category">Choose category</label>
+            <select name="category" id="edit-category" class="edit-select">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+              <option value="Qute">Qute</option>
+            </select>
+          </form>
+
+          <div class="form-footer">
+            <button id="edit-btn-cancel" class="modal-close">Cancel</button>
+            <button class="btn-update">Update Note</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- update note modal -->
+
+      <!-- modal for archived notes -->
+      <div id="archive-modal-key" class="archive-modal">
+        <div id="archive-content" class="modal-content">
+          <div class="modal-header">
+            <h3>Archived Notes</h3>
+            <div id="close-archive-btn">x</div>
+          </div>
+          <div id="archive-table"></div>
+        </div>
+      </div>
+      <!-- modal for archived notes -->
+
+      <script type="module" src="main.js"></script>
+      <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </main>
+  </body>
 </html>

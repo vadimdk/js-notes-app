@@ -12,9 +12,7 @@ async function handleDeleteNote(id) {
 }
 
 
-
 async function handleArchiveNote(id) {
-  console.log("id", id);
   try {
     await fetch(`http://localhost:4001/notesData/${id}`, {
       method: "PATCH",
@@ -30,4 +28,22 @@ async function handleArchiveNote(id) {
   }
 }
 
-export { handleDeleteNote, handleArchiveNote };
+async function handleUnArchiveNote(id) {
+  try {
+    await fetch(`http://localhost:4001/notesData/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        archived: false
+      })
+    });
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+
+
+export { handleDeleteNote, handleArchiveNote, handleUnArchiveNote };

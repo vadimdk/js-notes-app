@@ -1,8 +1,8 @@
 function cutLongString(str) {
-  if (str.length < 20) {
+  if (str.length < 25) {
     return str;
   }
-  const cutedStr = `${str.slice(0, 20)} ...`;
+  const cutedStr = `${str.slice(0, 25)} ...`;
   return cutedStr;
 }
 
@@ -24,4 +24,13 @@ function handleIconToShow(category) {
   }
 }
 
-export { cutLongString, extractDates, handleIconToShow };
+function checkInput(obj, fieldName) {
+  let error = false
+   if (obj[fieldName]) {
+    return error
+   }
+  return error = true
+}
+
+
+export { cutLongString, extractDates, handleIconToShow, checkInput };

@@ -9,27 +9,19 @@
       "archived": true
     },
     {
-      "name": "as",
-      "category": "Idea",
-      "content": "cx",
-      "archived": false,
-      "createdAt": "2023-07-30T10:56:22.565Z",
-      "id": 7
-    },
-    {
       "name": "Todo",
       "category": "Task",
       "content": "ewjfh jwefhoi weifhoi;3 iwrhf'o3wef iwerhfoi34ql iwoewrhofq",
-      "archived": true,
+      "archived": false,
       "createdAt": "2023-07-30T17:23:45.494Z",
       "id": 11
     },
     {
-      "name": "ww",
+      "name": "new idea",
+      "content": "new up sdgerkgmrelkm kmelfmelr;s.d",
+      "createdAt": "2023-07-31",
       "category": "Random Thought",
-      "content": "sdgerkgmrelkm kmelfmelr;s.d",
       "archived": false,
-      "createdAt": "2023-07-31T08:31:11.428Z",
       "id": 12
     },
     {
@@ -47,6 +39,14 @@
       "archived": false,
       "createdAt": "2023-07-31T10:43:10.884Z",
       "id": 14
+    },
+    {
+      "name": "My new thought",
+      "content": "new new text yupdated 5/08/2023",
+      "createdAt": "2023-07-31",
+      "category": "Random Thought",
+      "archived": false,
+      "id": 15
     }
   ]
 }
