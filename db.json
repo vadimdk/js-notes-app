@@ -1,0 +1,52 @@
+{
+  "notesData": [
+    {
+      "id": 2,
+      "name": "Todo list",
+      "createdAt": "2023-07-21T00:00:00.000Z",
+      "content": "I had a random thought today.",
+      "category": "Random Thought",
+      "archived": true
+    },
+    {
+      "name": "Todo",
+      "category": "Task",
+      "content": "ewjfh jwefhoi weifhoi;3 iwrhf'o3wef iwerhfoi34ql iwoewrhofq",
+      "archived": false,
+      "createdAt": "2023-07-30T17:23:45.494Z",
+      "id": 11
+    },
+    {
+      "name": "new idea",
+      "content": "new up sdgerkgmrelkm kmelfmelr;s.d",
+      "createdAt": "2023-07-31",
+      "category": "Random Thought",
+      "archived": false,
+      "id": 12
+    },
+    {
+      "name": "Some qute",
+      "category": "Qute",
+      "content": "rgoqei eirog'oe eriojgp'oe ",
+      "archived": false,
+      "createdAt": "2023-07-31T10:14:09.968Z",
+      "id": 13
+    },
+    {
+      "name": "Shopping list",
+      "category": "Task",
+      "content": "lemon, milk, bread, oats, tomatos, apples",
+      "archived": false,
+      "createdAt": "2023-07-31T10:43:10.884Z",
+      "id": 14
+    },
+    {
+      "name": "My new thought",
+      "content": "new new text yupdated 5/08/2023",
+      "createdAt": "2023-07-31",
+      "category": "Random Thought",
+      "archived": false,
+      "id": 15
+    }
+  ]
+}
